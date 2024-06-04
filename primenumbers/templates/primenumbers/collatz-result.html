@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>collatz-result</title>
+</head>
+<body style="text-align: center">
+    <h2>The Collatz-Conjecture for start number {{ startnumber }}:</h2>
+    {% load static %}
+    <img src="{% static 'collatz.png' %}">
+    <p>
+        It took {{ count }} calculations.
+    </p>
+</body>
+</html>

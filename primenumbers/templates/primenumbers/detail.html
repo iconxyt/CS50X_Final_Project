@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Detail</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body style="text-align: center">
+
+        <h1 id="actual_number">{{ number.number }}</h1>
+        
+        <p style="text-algin: center">
+            Number is {% if number.isPrime == True %}prime{% else %}not prime{% endif %}
+        </p>
+        <p>
+            Divisors:
+            {% for div in divs %}
+            <a href="{% url 'primenumbers:search' div %}">{{ div }}</a>
+            {% endfor %}
+        </p>
+        <p>
+            {% if isEven == True %}
+                Number is even
+            {% else %}
+                Number is odd
+            {% endif %}
+        </p>
+        <p>
+            {% if isPerfect == True %}
+                Number is <a href="https://www.britannica.com/science/perfect-number">perfect</a>
+            {% else %}
+                Number is <a href="https://www.britannica.com/science/perfect-number">imperfect</a>
+            {% endif %}
+        </p>
+        <p>
+            Display number in <button onclick="displayBinary()">Binary</button> <button onclick="displayHexadecimal()">Hexadecimal</button>:
+            <span id="other_display">
+
+            </span>
+        </p>
+
+        {% load static %}
+        <script src="{% static 'detail.js' %}"></script>
+    </body>
+</html>

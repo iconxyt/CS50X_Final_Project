@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/static/quiz.css">
+</head>
+<body style="text-align: center">
+    <form action="{% url 'primenumbers:quiz' %}" method="post">
+        {% csrf_token %}
+        <h2>Hello and Welcome to our fun math quiz. </h2>
+
+        <p>What is the square root of 12345678987654321?</p>
+        <div>
+            <input type="radio" id="1234321" name="q1" value="1234321">
+            <label for="1234321">1234321</label>
+            <input type="radio" id="111111111" name="q1" value="111111111">
+            <label for="111111111">111111111</label>
+            <input type="radio" id="123456789" name="q1" value="123456789">
+            <label for="123456789">123456789</label>
+            <input type="radio" id="222222" name="q1" value="222222">
+            <label for="222222">222222</label>
+        </div> <br>
+
+        <p>
+            How many Millennium Problems have been solved?
+        </p>
+        <div>
+            <input type="radio" id="none" name="q2" value="none">
+            <label for="none">none</label>
+            <input type="radio" id="one" name="q2" value="one">
+            <label for="one">one</label>
+            <input type="radio" id="two" name="q2" value="two">
+            <label for="two">two</label>
+            <input type="radio" id="all" name="q2" value="all">
+            <label for="all">all</label>
+        </div><br>
+
+        <p>
+            Which of these numbers is the largest?
+        </p>
+
+        <div>
+            <input type="radio" id="Octodecillion" name="q3" value="Octodecillion">
+            <label for="Octodecillion">Octodecillion</label>
+            <input type="radio" id="Googol" name="q3" value="Googol">
+            <label for="Googol">Googol</label>
+            <input type="radio" id="Rayo's Number" name="q3" value="Rayo's Number">
+            <label for="Rayo's Number">Rayo's Number</label>
+            <input type="radio" id="Graham's Number" name="q3" value="Graham's Number">
+            <label for="Graham's Number">Graham's Number</label>
+        </div> <br>
+
+        <p>
+            What does the sum of all positive integers (1 + 2 + 3 + 4 + 5 + ...) equal?
+        </p>
+        <div>
+            <input type="radio" id="infinity" name="q4" value="infinity">
+            <label for="infinity">Infinity</label>
+            <input type="radio" id="-1/12" name="q4" value="-1/12">
+            <label for="-1/12">-1/12</label>
+            <input type="radio" id="42" name="q4" value="42">
+            <label for="42">42</label>
+            <input type="radio" id="0" name="q4" value="0">
+            <label for="0">0</label>
+        </div> <br>
+
+
+        <p>What is the square root of -1?</p>
+        <div>
+            <input type="radio" id="magic" name="q5" value="magic">
+            <label for="magic">magic</label>
+            <input type="radio" id="1" name="q5" value="1">
+            <label for="1">1</label>
+            <input type="radio" id="don't make no sense, stupid question" name="q5" value="don't make no sense, stupid question">
+            <label for="don't make no sense, stupid question">don't make no sense, stupid question</label>
+            <input type="radio" id="i" name="q5" value="i">
+            <label for="i">i</label>
+        </div> <br>
+
+        <p>
+            Which of these infinities is the largest?
+        </p>
+        <div>
+            <input type="radio" id="real numbers between 0 and 1" name="q6" value="real numbers between 0 and 1">
+            <label for="real numbers between 0 and 1">real numbers between 0 and 1</label>
+            <input type="radio" id="All natural numbers" name="q6" value="All natural numbers">
+            <label for="All natural numbers">All natural numbers</label>
+            <input type="radio" id="All natural numbers plus one" name="q6" value="All natural numbers plus one">
+            <label for="All natural numbers plus one">All natural numbers plus one</label>
+            <input type="radio" id="all mentioned answers plus one" name="q6" value="all mentioned answers plus one">
+            <label for="all mentioned answers plus one">all mentioned answers plus one</label>
+        </div> <br>
+
+        <input type="submit">
+    </form>
+</body>
+</html>

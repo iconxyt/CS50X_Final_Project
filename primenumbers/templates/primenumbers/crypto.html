@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cryptography</title>
+</head>
+<body style="text-align: center">
+        <h1>Caesar cipher</h1>
+            <h3>Encryption</h3>
+            <label for="encrypt">Text: </label><input type="text" id="encrypt"> <label for="e_key">Key: </label> <input type="number" id="e_key" style="width: 40px"><br>
+            <button onclick="encrypt()">Encrypt</button>
+            <div id="encrypted" style="margin-top: 10px">
+
+            </div>
+
+            <h3 style="margin-top: 80px">Decryption</h3>
+            <label for="decrypt">Text: </label><input type="text" id="decrypt"> <label for="d_key">Key: </label> <input type="number" id="d_key" style="width: 40px"><br>
+            <button onclick="decrypt()">Decrypt</button>
+            <div id="decrypted" style="margin-top: 10px">
+
+            </div>
+
+
+
+
+
+        {% load static %}
+        <script src="{% static 'crypto.js' %}"></script>
+</body>
+</html>

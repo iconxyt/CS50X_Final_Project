@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Index</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/index.css">
+    </head>
+
+    <body style="text-align: center">
+        <p>
+            Have fun with numbers!
+        </p>
+        <p>
+            Go <a href="{% url 'primenumbers:list' %}">here</a> to see a list of all numbers up to 100.000!
+
+        </p>
+
+
+    <form action="{% url 'primenumbers:searchbox' %}" method="post">
+        {% csrf_token %}
+        <label for="number_search">Or search for a specific number: </label>
+        <input type="text" name="number_searched" id="number_search">
+        <input type="submit">
+    </form>
+
+
+        <p>
+            Click <a href="{% url 'primenumbers:quiz' %}">here</a> for a fun math quiz.
+        </p>
+
+        <p>
+           Click <a href="{% url 'primenumbers:collatz' %}">here</a> to plot a collatz-conjecture.
+        </p>
+
+        <p>
+            Click <a href="{% url 'primenumbers:binomial' %}">here</a> to create a binomial distribution.
+        </p>
+
+        <p>
+            Click <a href="{% url 'primenumbers:crypto' %}">here</a> to encrypt or decrypt text with the Ceasar cipher.
+        </p>
+
+        <script src="" async defer></script>
+    </body>
+</html>
